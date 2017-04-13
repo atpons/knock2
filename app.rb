@@ -20,12 +20,12 @@ def workseet
 end
 
 def atend
-  puts "Please input your student id:"
+  puts "[*] Input your student ID"
   @id = gets.chomp!
 
   case @id
   when "00000000"
-    puts "ok, exited"
+    puts "[*] Exit from attendance"
     exit
   end
 
@@ -48,9 +48,11 @@ def atend
   end
 end
 
-puts "Access to Google Spreadsheet"
+puts "[*] Access to Google spreadsheet"
 
 workseet
+
+puts "[*] Start attendance"
 
 loop do
   atend
